@@ -15,7 +15,7 @@ available_products = {
     "beans": 15,
 }
 
-cart = []
+cart = [] #mango
 user = input("Product to add to cart:")
 
 if user not in available_products:
@@ -25,7 +25,8 @@ else:
 
 total_price = 0
 for items in cart:
-    total_price += available_products[items]
+    total_price += available_products[items] 
+
     if total_price > 100:
         discount = total_price * (10/100)
 

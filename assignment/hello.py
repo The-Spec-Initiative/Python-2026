@@ -23,8 +23,8 @@ else:
 # Create a script that checks a variable role ("admin", "user", "guest")
 # and prints a custom welcome message for each using if/elif/else.
 role = input("What's your role? ")
-
-if role == "admin":
+#Admin, ADMIN, AdMin -> admin
+if role.lower() == "admin":
     print("Welcome Admin!")
 elif role in ("user", "guest"):
     print("Welcome!!")
@@ -51,8 +51,10 @@ print(f"The total price is {total}")
 numbers = [1, 2, 3, 4]
 (numbers.append(5))
 print(numbers)
-print(numbers[: 3])
-
+print(numbers[: 3]) 
+#slicing in py
+#List
+#Dictionaries
 # Create a product dictionary with keys: name, price, and in_stock.
 # Print a string saying "The [name] costs $[price]".
 
@@ -61,7 +63,9 @@ product = {
     "price": 40,
     "in_stock": True,
 }
-
+product["in_stock"] = False
+product["color"]= "red"
+# delete, loop
 print(f"The {product['name']} cost ${product['price']}")
 
 # Create a list of user names.
@@ -94,6 +98,16 @@ with open("notes.txt", "r") as file:
 
 # Import the random module to create a simple "Guess the Number"
 # game where the computer picks a number between 1-10.
+
+# Gives 3 tries, 1 check if the number i input is greater or less than the random number number generated
+#2  9
+#rand number is greater than 2( 1)
+####9 break out i won
+#5
+# rand number is greater than 5(2)
+# 6 rand numner is greater than 6(3)
+#game over(3)
+
 
 
 number = random.randint(1, 10)
